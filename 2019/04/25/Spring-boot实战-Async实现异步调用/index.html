@@ -96,13 +96,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Breezek">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="Spring boot为任务调度与异步方法执行提供了注解支持。通过在方法上设置@Async注解，可使得方法被异步执行。    开启@Async注解支持我们通过新增JavaConfig，添加上@EnableAsync注解，即可开启异步调用支持：1234@Configuration@EnableAsyncpublic class AsyncConfig &amp;#123;&amp;#125; 异步调用 在开发过程">
+<meta name="keywords" content="异步调用,Spring boot,Async">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring boot实战-@Async详解">
+<meta property="og:url" content="http://yoursite.com/2019/04/25/Spring-boot实战-Async实现异步调用/index.html">
 <meta property="og:site_name" content="Breezek">
+<meta property="og:description" content="Spring boot为任务调度与异步方法执行提供了注解支持。通过在方法上设置@Async注解，可使得方法被异步执行。    开启@Async注解支持我们通过新增JavaConfig，添加上@EnableAsync注解，即可开启异步调用支持：1234@Configuration@EnableAsyncpublic class AsyncConfig &amp;#123;&amp;#125; 异步调用 在开发过程">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-27T12:08:01.079Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Breezek">
+<meta name="twitter:title" content="Spring boot实战-@Async详解">
+<meta name="twitter:description" content="Spring boot为任务调度与异步方法执行提供了注解支持。通过在方法上设置@Async注解，可使得方法被异步执行。    开启@Async注解支持我们通过新增JavaConfig，添加上@EnableAsync注解，即可开启异步调用支持：1234@Configuration@EnableAsyncpublic class AsyncConfig &amp;#123;&amp;#125; 异步调用 在开发过程">
 
 
 
@@ -110,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/archives/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/25/Spring-boot实战-Async实现异步调用/">
 
 
 
@@ -120,7 +125,7 @@
   };
 </script>
 
-  <title>归档 | Breezek</title>
+  <title>Spring boot实战-@Async详解 | Breezek</title>
   
 
 
@@ -168,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -257,7 +262,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -286,25 +291,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -351,113 +337,230 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 2 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/25/Spring-boot实战-Async实现异步调用/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Breezek">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Breezek">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/04/25/Spring-boot实战-Async实现异步调用/" itemprop="url">
-            
-              <span itemprop="name">Spring boot实战-@Async详解</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Spring boot实战-@Async详解
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-25T16:07:00+08:00" content="2019-04-25">
-          04-25
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-25 16:07:00" itemprop="dateCreated datePublished" datetime="2019-04-25T16:07:00+08:00">2019-04-25</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-27 20:08:01" itemprop="dateModified" datetime="2019-04-27T20:08:01+08:00">2019-04-27</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Spring-boot/" itemprop="url" rel="index"><span itemprop="name">Spring boot</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/25/hello-world/" itemprop="url">
-            
-              <span itemprop="name">Hello World!</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-25T15:36:00+08:00" content="2019-04-25">
-          04-25
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <blockquote>
+<p>Spring boot为任务调度与异步方法执行提供了注解支持。通过在方法上设置@Async注解，可使得方法被异步执行。  </p>
+</blockquote>
+<h3 id="开启-Async注解支持"><a href="#开启-Async注解支持" class="headerlink" title="开启@Async注解支持"></a>开启@Async注解支持</h3><p>我们通过新增JavaConfig，添加上@EnableAsync注解，即可开启异步调用支持：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableAsync</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsyncConfig</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="异步调用"><a href="#异步调用" class="headerlink" title="异步调用"></a>异步调用</h3><blockquote>
+<p>在开发过程中，调用一个比较耗时的方法，若无需等待它执行完毕或不关注返回结果时，可以在此方法上添加@Async注解，在调用时就会使用异步执行。</p>
+</blockquote>
+<p>定义AsyncTask类，创建两个无返回值的异步方法<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsyncTask</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Async</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">task1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        log.info(<span class="string">"task1 start"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Async</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">task2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        log.info(<span class="string">"task2 start"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>定义单元测试用例，依次执行task1、task2<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsyncTaskTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> AsyncTask asyncTask;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">taskTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        log.info(<span class="string">"taskTest start"</span>);</span><br><span class="line">        asyncTask.task1();</span><br><span class="line">        asyncTask.task2();</span><br><span class="line">        log.info(<span class="string">"taskTest end"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>执行单元测试，看到以下日志内容：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INFO [15:18:29.182][main][com.breezek.demo.common.AsyncTaskTest][25]:taskTest start</span><br><span class="line">INFO [15:18:29.188][main][com.breezek.demo.common.AsyncTaskTest][29]:taskTest end</span><br><span class="line">INFO [15:18:29.192][task-1][com.breezek.demo.common.AsyncTask][29]:task2 start</span><br><span class="line">INFO [15:18:29.192][task-2][com.breezek.demo.common.AsyncTask][24]:task1 start</span><br></pre></td></tr></table></figure></p>
+<p>可以看出：  </p>
+<ol>
+<li>AsyncTaskTest.taskTest执行task1、task2时，分别创建了新的线程，而不是在main线程中执行  </li>
+<li>main线程不会等待task1、task2执行完毕，会继续向下执行  </li>
+</ol>
+<p><strong><em>注：异步方法不要定义为static类型，并且不能和调用方法写在同一个类中，否则异步调用不会生效</em></strong></p>
+<h3 id="异步回调"><a href="#异步回调" class="headerlink" title="异步回调"></a>异步回调</h3><blockquote>
+<p>开发过程中，调用一个比较耗时的方法时，如果并不着急要返回结果时，我们可以让被调用者立即返回,让他在后台慢慢处理这个请求。对于调用者来说,则可以先处理一些其他任务,在真正需要数据的场合再去尝试获取需要的数据。</p>
+</blockquote>
+<p>定义AsyncTask类，创建两个带返回值的异步方法，返回值类型为Future&lt;T&gt;，task1执行时间5s，task2执行时间10s<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsyncTask</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Async</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Future&lt;String&gt; <span class="title">task1</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        log.info(<span class="string">"task1 start"</span>);</span><br><span class="line">        Thread.sleep(<span class="number">5000L</span>);</span><br><span class="line">        log.info(<span class="string">"task1 end"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> AsyncResult&lt;&gt;(<span class="string">"task1 result"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Async</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Future&lt;Integer&gt; <span class="title">task2</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        Integer abc = <span class="number">1</span>;</span><br><span class="line">        log.info(<span class="string">"task2 start"</span>);</span><br><span class="line">        Thread.sleep(<span class="number">10000L</span>);</span><br><span class="line">        log.info(<span class="string">"task2 end"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> AsyncResult&lt;&gt;(abc);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>单元测试用例中，依次调用task1、task2，并等待task1和task2执行完毕<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringRunner.class)</span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="meta">@Slf</span>4j</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AsyncTaskTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> AsyncTask asyncTask;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">taskTest</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        log.info(<span class="string">"taskTest start"</span>);</span><br><span class="line">        Future&lt;String&gt; task1Future = asyncTask.task1();</span><br><span class="line">        Future&lt;Integer&gt; task2Future = asyncTask.task2();</span><br><span class="line">        <span class="comment">// do something</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (!task1Future.isDone() || !task2Future.isDone()) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        log.info(<span class="string">"taskTest end"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>执行单元测试，看到以下日志内容<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">INFO [17:54:24.554][main][com.breezek.demo.common.AsyncTaskTest][28]:taskTest start</span><br><span class="line">INFO [17:54:24.566][task-1][com.breezek.demo.common.AsyncTask][27]:task1 start</span><br><span class="line">INFO [17:54:24.566][task-2][com.breezek.demo.common.AsyncTask][36]:task2 start</span><br><span class="line">INFO [17:54:29.569][task-1][com.breezek.demo.common.AsyncTask][29]:task1 end</span><br><span class="line">INFO [17:54:34.570][task-2][com.breezek.demo.common.AsyncTask][38]:task2 end</span><br><span class="line">INFO [17:54:34.570][main][com.breezek.demo.common.AsyncTaskTest][34]:taskTest end</span><br></pre></td></tr></table></figure></p>
+<p>可以看到，AsyncTaskTest.taskTest等待task1和task2并发执行完毕再继续向下执行，相比较task1、task2串行执行，有效的节省了时间</p>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><h3 id="异步线程池配置"><a href="#异步线程池配置" class="headerlink" title="异步线程池配置"></a>异步线程池配置</h3>
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/异步调用/" rel="tag"># 异步调用</a>
+          
+            <a href="/tags/Spring-boot/" rel="tag"># Spring boot</a>
+          
+            <a href="/tags/Async/" rel="tag"># Async</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/25/hello-world/" rel="next" title="Hello World!">
+                <i class="fa fa-chevron-left"></i> Hello World!
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -477,8 +580,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -562,6 +674,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#开启-Async注解支持"><span class="nav-number">1.</span> <span class="nav-text">开启@Async注解支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步调用"><span class="nav-number">2.</span> <span class="nav-text">异步调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步回调"><span class="nav-number">3.</span> <span class="nav-text">异步回调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常处理"><span class="nav-number">4.</span> <span class="nav-text">异常处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步线程池配置"><span class="nav-number">5.</span> <span class="nav-text">异步线程池配置</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -691,6 +820,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -706,6 +839,8 @@
 
   
 
+
+  
 
 
   

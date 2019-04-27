@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Spring boot实战-@Async详解]]></title>
+    <url>%2F2019%2F04%2F25%2FSpring-boot%E5%AE%9E%E6%88%98-Async%E5%AE%9E%E7%8E%B0%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[Spring boot为任务调度与异步方法执行提供了注解支持。通过在方法上设置@Async注解，可使得方法被异步执行。 开启@Async注解支持我们通过新增JavaConfig，添加上@EnableAsync注解，即可开启异步调用支持：1234@Configuration@EnableAsyncpublic class AsyncConfig &#123;&#125; 异步调用 在开发过程中，调用一个比较耗时的方法，若无需等待它执行完毕或不关注返回结果时，可以在此方法上添加@Async注解，在调用时就会使用异步执行。 定义AsyncTask类，创建两个无返回值的异步方法1234567891011121314@Component@Slf4jpublic class AsyncTask &#123; @Async public void task1() &#123; log.info("task1 start"); &#125; @Async public void task2() &#123; log.info("task2 start"); &#125;&#125; 定义单元测试用例，依次执行task1、task212345678910111213141516@RunWith(SpringRunner.class)@SpringBootTest@Slf4jpublic class AsyncTaskTest &#123; @Autowired private AsyncTask asyncTask; @Test public void taskTest() &#123; log.info("taskTest start"); asyncTask.task1(); asyncTask.task2(); log.info("taskTest end"); &#125;&#125; 执行单元测试，看到以下日志内容：1234INFO [15:18:29.182][main][com.breezek.demo.common.AsyncTaskTest][25]:taskTest startINFO [15:18:29.188][main][com.breezek.demo.common.AsyncTaskTest][29]:taskTest endINFO [15:18:29.192][task-1][com.breezek.demo.common.AsyncTask][29]:task2 startINFO [15:18:29.192][task-2][com.breezek.demo.common.AsyncTask][24]:task1 start 可以看出： AsyncTaskTest.taskTest执行task1、task2时，分别创建了新的线程，而不是在main线程中执行 main线程不会等待task1、task2执行完毕，会继续向下执行 注：异步方法不要定义为static类型，并且不能和调用方法写在同一个类中，否则异步调用不会生效 异步回调 开发过程中，调用一个比较耗时的方法时，如果并不着急要返回结果时，我们可以让被调用者立即返回,让他在后台慢慢处理这个请求。对于调用者来说,则可以先处理一些其他任务,在真正需要数据的场合再去尝试获取需要的数据。 定义AsyncTask类，创建两个带返回值的异步方法，返回值类型为Future&lt;T&gt;，task1执行时间5s，task2执行时间10s123456789101112131415161718192021@Component@Slf4jpublic class AsyncTask &#123; @Async public Future&lt;String&gt; task1() throws InterruptedException &#123; log.info("task1 start"); Thread.sleep(5000L); log.info("task1 end"); return new AsyncResult&lt;&gt;("task1 result"); &#125; @Async public Future&lt;Integer&gt; task2() throws InterruptedException &#123; Integer abc = 1; log.info("task2 start"); Thread.sleep(10000L); log.info("task2 end"); return new AsyncResult&lt;&gt;(abc); &#125;&#125; 单元测试用例中，依次调用task1、task2，并等待task1和task2执行完毕12345678910111213141516171819202122@RunWith(SpringRunner.class)@SpringBootTest@Slf4jpublic class AsyncTaskTest &#123; @Autowired private AsyncTask asyncTask; @Test public void taskTest() throws InterruptedException &#123; log.info("taskTest start"); Future&lt;String&gt; task1Future = asyncTask.task1(); Future&lt;Integer&gt; task2Future = asyncTask.task2(); // do something for (int i = 0; i &lt; 1000; i++) &#123; &#125; while (!task1Future.isDone() || !task2Future.isDone()) &#123; &#125; log.info("taskTest end"); &#125;&#125; 执行单元测试，看到以下日志内容123456INFO [17:54:24.554][main][com.breezek.demo.common.AsyncTaskTest][28]:taskTest startINFO [17:54:24.566][task-1][com.breezek.demo.common.AsyncTask][27]:task1 startINFO [17:54:24.566][task-2][com.breezek.demo.common.AsyncTask][36]:task2 startINFO [17:54:29.569][task-1][com.breezek.demo.common.AsyncTask][29]:task1 endINFO [17:54:34.570][task-2][com.breezek.demo.common.AsyncTask][38]:task2 endINFO [17:54:34.570][main][com.breezek.demo.common.AsyncTaskTest][34]:taskTest end 可以看到，AsyncTaskTest.taskTest等待task1和task2并发执行完毕再继续向下执行，相比较task1、task2串行执行，有效的节省了时间 异常处理异步线程池配置]]></content>
+      <categories>
+        <category>Spring boot</category>
+      </categories>
+      <tags>
+        <tag>异步调用</tag>
+        <tag>Spring boot</tag>
+        <tag>Async</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World!]]></title>
+    <url>%2F2019%2F04%2F25%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Hello World!]]></content>
+  </entry>
+</search>
